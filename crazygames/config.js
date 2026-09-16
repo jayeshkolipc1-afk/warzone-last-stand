@@ -9,5 +9,5 @@
 window.WLS_CONFIG = {
   multiplayerServerUrl:
     new URLSearchParams(location.search).get("server") ||
-    "wss://YOUR-RENDER-SERVICE.onrender.com"
+    "wss://warzone-last-stand.onrender.com"
 };
