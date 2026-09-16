@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head>
+<script src="https://sdk.crazygames.com/crazygames-sdk-v3.js"></script>
+<script src="config.js"></script><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WARZONE: LAST STAND</title>
+<meta name="description" content="WARZONE: LAST STAND — fast browser multiplayer FPS.">
+<meta name="theme-color" content="#07090d"><link rel="stylesheet" href="style.css"></head>
+<body>
+<div id="menu" class="screen"><div id="sdkStatus" class="sdk-status">LOADING...</div><div class="brand">WARZONE <span>LAST STAND</span></div>
+<p class="tag">ONLINE MULTIPLAYER // SURVIVE. ADAPT. DOMINATE.</p>
+<input id="username" maxlength="16" placeholder="Enter username (3–16 chars)">
+<div class="buttons"><button id="create">CREATE ROOM</button><button id="join">JOIN ROOM</button><button id="quick">QUICK MATCH</button><button id="practice">PRACTICE</button></div>
+<div id="roomBox" class="panel hidden"></div><div id="status"></div></div>
+
+<div id="game" class="hidden">
+<div class="hud"><div id="score">RED 0 — 0 BLUE</div><div id="timer">10:00</div></div>
+<div id="crosshair">+</div><div class="stats">HP <b id="hp">100</b><br>ARMOR <b>50</b></div>
+<div class="weapon">ASSAULT RIFLE<br><b id="ammo">30 / 120</b></div>
+<div id="feed"></div><canvas id="c"></canvas>
+<div id="mobile" class="hidden"><button id="fire">FIRE</button></div>
+</div>
+<script type="module" src="game.js"></script><script>
+window.addEventListener("error", e => console.warn("Game error:", e.message));
+</script></body></html>
